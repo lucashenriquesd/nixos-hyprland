@@ -88,6 +88,7 @@
     wofi
     pwvucontrol
     hyprpaper
+    yazi
   ];
 
   environment.variables = {
