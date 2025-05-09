@@ -55,7 +55,7 @@
         "tooltip-format":  "Available {free} of {total}"
     },
     "memory": {
-        "interval": 10,
+        "interval": 1,
         "format": "  {used}GiB",
         "max-length": 15,
         "tooltip": true,

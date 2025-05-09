@@ -85,12 +85,14 @@
     bibata-cursors
     glib
     gsettings-qt
+    wofi
+    pwvucontrol
   ];
 
   environment.variables = {
-    XCURSOR_THEME = "Bibata-Modern-Classic";
-    XCURSOR_SIZE = "20";
-    NIXOS_OZONE_WL = "1";
+    XCURSOR_THEME = "Bibata-Modern-Classic"; # apply cursor style when hovering desktop
+    XCURSOR_SIZE = "20"; # apply cursor style when hovering desktop
+    NIXOS_OZONE_WL = "1"; # brave run wayland mode
   };
 
   fonts.packages = with pkgs; [
