@@ -87,6 +87,7 @@
     gsettings-qt
     wofi
     pwvucontrol
+    hyprpaper
   ];
 
   environment.variables = {
