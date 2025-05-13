@@ -19,6 +19,8 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
 
+  virtualisation.docker.enable = true;
+
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
@@ -58,7 +60,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.lucas = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "docker" ]; # Enable ‘sudo’ for the user.
     initialHashedPassword = "";
   #   packages = with pkgs; [
   #     tree
