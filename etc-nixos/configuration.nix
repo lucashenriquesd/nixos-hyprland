@@ -68,6 +68,7 @@
   };
 
   programs.hyprland.enable = true;
+  programs.ssh.startAgent = true;
 
   programs.neovim = {
     enable = true;
@@ -91,6 +92,7 @@
     pwvucontrol
     hyprpaper
     yazi
+    lazygit
   ];
 
   environment.variables = {
