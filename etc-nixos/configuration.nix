@@ -93,6 +93,9 @@
     hyprpaper
     yazi
     lazygit
+    nushell
+    eza
+    bat
   ];
 
   environment.variables = {
