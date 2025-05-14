@@ -62,12 +62,16 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "docker" ]; # Enable ‘sudo’ for the user.
     initialHashedPassword = "";
+    shell = pkgs.nushell;
   #   packages = with pkgs; [
   #     tree
   #   ];
   };
 
+  users.defaultUserShell = pkgs.nushell;
+
   programs.hyprland.enable = true;
+
   programs.ssh.startAgent = true;
 
   programs.neovim = {
@@ -96,7 +100,10 @@
     nushell
     eza
     bat
+    btop
   ];
+
+  environment.shells = with pkgs; [ nushell ];
 
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Classic"; # apply cursor style when hovering desktop
