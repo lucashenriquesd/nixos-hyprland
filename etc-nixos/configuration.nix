@@ -83,6 +83,7 @@
   environment.systemPackages = with pkgs; [
     vim
     ghostty
+    kitty
     git
     waybar
     brave
@@ -95,9 +96,11 @@
     yazi
     lazygit
     nushell
+    fish
     eza
     bat
     btop
+    starship
   ];
 
   environment.variables = {
