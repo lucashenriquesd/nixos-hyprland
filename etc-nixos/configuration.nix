@@ -4,7 +4,16 @@
 
 { config, lib, pkgs, ... }:
 
+let
+  unstable = import <nixos-unstable> { inherit (pkgs) system; };
+in
 {
+  nixpkgs.overlays = [
+    (final: prev: {
+      nushell = unstable.nushell;
+    })
+  ];
+
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
@@ -101,6 +110,8 @@
     bat
     btop
     starship
+    vscode
+    wl-clipboard
   ];
 
   environment.variables = {
@@ -108,6 +119,8 @@
     XCURSOR_SIZE = "20"; # apply cursor style when hovering desktop
     NIXOS_OZONE_WL = "1"; # brave run wayland mode
   };
+
+  nixpkgs.config.allowUnfree = true;
 
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "0xProto" ]; })
