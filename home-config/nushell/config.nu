@@ -37,5 +37,6 @@ export def copy-raw [] {
   | ^wl-copy -n
 }
 
-alias paste = ^wl-paste -n
+def e [...text] { echo ($text | str join " ") }
 
+alias paste = ^wl-paste -n
