@@ -112,6 +112,7 @@ in
     starship
     vscode
     wl-clipboard
+    tldr
   ];
 
   environment.variables = {
