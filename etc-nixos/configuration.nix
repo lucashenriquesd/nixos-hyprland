@@ -11,6 +11,7 @@ in
   nixpkgs.overlays = [
     (final: prev: {
       nushell = unstable.nushell;
+      hyprlock = unstable.hyprlock;
     })
   ];
 
@@ -113,6 +114,7 @@ in
     vscode
     wl-clipboard
     tldr
+    hyprlock
   ];
 
   environment.variables = {
@@ -126,6 +128,15 @@ in
   fonts.packages = with pkgs; [
     (nerdfonts.override { fonts = [ "0xProto" ]; })
   ];
+
+  services.fprintd.enable = true;
+
+  security.pam.services.hyprlock = {
+    text = ''
+      auth sufficient pam_fprintd.so
+      auth include login
+    '';
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
