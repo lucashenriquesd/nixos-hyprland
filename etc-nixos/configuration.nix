@@ -117,6 +117,7 @@ in
     tldr
     hyprlock
     dysk
+    fastfetch
   ];
 
   environment.variables = {
