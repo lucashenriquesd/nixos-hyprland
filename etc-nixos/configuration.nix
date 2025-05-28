@@ -118,6 +118,7 @@ in
     hyprlock
     dysk
     fastfetch
+    wavemon
   ];
 
   environment.variables = {
