@@ -116,6 +116,7 @@ in
     wl-clipboard
     tldr
     hyprlock
+    dysk
   ];
 
   environment.variables = {
