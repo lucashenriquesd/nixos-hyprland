@@ -105,6 +105,7 @@ in
     hyprpaper
     yazi
     lazygit
+    lazydocker
     nushell
     fish
     eza
